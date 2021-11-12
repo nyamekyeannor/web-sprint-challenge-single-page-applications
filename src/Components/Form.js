@@ -11,8 +11,6 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // alert(`${inputs.pizzaSize}`);
-    alert(`${inputs.veggie}`);
     if (inputs.name.length < 2) {
       alert("name must be at least 2 characters");
     }
@@ -44,48 +42,60 @@ const Form = () => {
           <option value="SMALL">SMALL</option>
         </select>
       </label>
+      <br />
 
       <label htmlFor="Toppings">
-        Choose your toppings:
-        <input
-          type="checkbox"
-          name="veggie"
-          value={inputs.veggie || "veggie"}
-          onChange={handleChange}
-        />
         <input
           type="checkbox"
           name="chicken"
           value={inputs.chicken || "chicken"}
           onChange={handleChange}
-        />
-        {/* <input
-          type="checkbox"
-          name="veggie"
-          value={inputs.veggie || "veggie"}
-          onChange={handleChange}
-        />
-        <input
-          type="checkbox"
-          name="veggie"
-          value={inputs.veggie || "veggie"}
-          onChange={handleChange}
-        />
-        <input
-          type="checkbox"
-          name="veggie"
-          value={inputs.veggie || "veggie"}
-          onChange={handleChange}
-        />
-        <input
-          type="checkbox"
-          name="veggie"
-          value={inputs.veggie || "veggie"}
-          onChange={handleChange}
-        /> */}
+        />{" "}
+        Chicken:
       </label>
+      <br />
+      <label htmlFor="Toppings">
+        <input
+          type="checkbox"
+          name="beef"
+          value={inputs.beef || "beef"}
+          onChange={handleChange}
+        />
+        Beef:
+      </label>
+      <br />
+      <label htmlFor="Toppings">
+        <input
+          type="checkbox"
+          name="pepperoni"
+          value={inputs.pepperoni || "pepperoni"}
+          onChange={handleChange}
+        />
+        pepperoni:
+      </label>
+      <br />
+      <label htmlFor="Toppings">
+        <input
+          type="checkbox"
+          name="cheese"
+          value={inputs.cheese || "cheese"}
+          onChange={handleChange}
+        />{" "}
+        cheese:
+      </label>
+      <br />
 
-      <input type="submit" />
+      <label htmlfor="special-text">Special Instrucions:</label>
+      <textarea
+        id="special-text"
+        name="specialText"
+        value={inputs.specialText || ""}
+        onChange={handleChange}
+        rows="4"
+        cols="50"
+      ></textarea>
+
+      <input id="order-button" type="submit" />
     </form>
   );
 };
