@@ -5,7 +5,9 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${name}`);
+    if (name.length < 2) {
+      alert("name must be at least 2 characters");
+    }
   };
   return (
     <form id="pizza-form" onSubmit={handleSubmit}>
