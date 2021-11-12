@@ -1,8 +1,9 @@
 import { useState } from "react";
 
+const yupForm = yup.object().shape;
+
 const Form = () => {
   const [inputs, setInputs] = useState({});
-
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -85,17 +86,21 @@ const Form = () => {
       </label>
       <br />
 
-      <label htmlfor="special-text">Special Instrucions:</label>
+      <label htmlFor="special-text">Special Instrucions:</label>
       <textarea
         id="special-text"
         name="specialText"
         value={inputs.specialText || ""}
         onChange={handleChange}
-        rows="4"
-        cols="50"
+        rows=""
+        cols="10"
       ></textarea>
+      <br />
 
-      <input id="order-button" type="submit" />
+      {/* <input id="order-button" type="submit" /> */}
+      <button id="order-button" type="submit">
+        Order
+      </button>
     </form>
   );
 };
