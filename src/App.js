@@ -6,7 +6,9 @@ import Home from "./Home";
 const App = () => {
   return (
     <div className="header">
-      <h1>Lambda Pizza </h1>
+      <h1>Lambda Pizza We put the P in Piźźà</h1>
+      <p>Safe space for crust lovers and crust haters!</p>
+      <p>Disclaimer: All our pizza is made from vegan products</p>
       <nav>
       <Link to="/"><button id="home-button">Home</button></Link>
       <Link to="/pizza"><button id="order-pizza">Order Pizza!</button></Link>
@@ -19,7 +21,6 @@ const App = () => {
   );
 };
 export default App;
-
 
 
 
